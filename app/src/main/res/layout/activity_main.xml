@@ -1,0 +1,175 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:id="@+id/relative">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/liner2"
+        android:weightSum="1"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_height="484dp"
+            android:layout_width="match_parent"
+            android:id="@+id/liner1"
+            android:layout_weight="1.05"
+            android:padding="20dp"
+            android:weightSum="1">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:id="@+id/framelayout"
+                android:layout_height="300dp"
+                android:layout_weight="1.06">
+
+                <ImageView
+                    android:id="@+id/imageView1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:scaleType="centerCrop" />
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:weightSum="1"
+                android:layout_height="75dp">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.89"
+                    android:layout_width="225dp">
+
+                    <ImageButton
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/cultureglay"
+                        android:layout_weight="1"
+                        android:id="@+id/Culture"
+                        style="?android:attr/borderlessButtonStyle"
+                        android:scaleType="centerCrop"
+                        android:background="@null"/>
+
+                    <ImageButton
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/physicalglay"
+                        android:layout_weight="1"
+                        android:id="@+id/Physical"
+                        style="?android:attr/borderlessButtonStyle"
+                        android:scaleType="centerCrop"
+                        android:background="@null"/>
+
+                    <ImageButton
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/emotionalglay"
+                        android:id="@+id/Emotional"
+                        android:layout_weight="1"
+                        style="?android:attr/borderlessButtonStyle"
+                        android:scaleType="centerCrop"
+                        android:background="@null"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_height="match_parent"
+                    android:weightSum="1"
+                    android:layout_width="wrap_content">
+
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/spinner"
+                        android:entries="@array/list" />
+
+                    <SeekBar
+                        android:layout_width="match_parent"
+                        android:id="@+id/seekBar"
+                        android:layout_height="match_parent"
+                        android:progress="100" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentTop="true"
+                android:layout_weight="0.47">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:background="@drawable/black_flame"
+                    android:id="@+id/editText"
+                    android:layout_height="92dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_alignParentBottom="true"
+            android:weightSum="1"
+            android:background="@drawable/frame"
+            android:gravity="bottom"
+            android:layout_height="60dp">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="camera"
+                android:id="@+id/camera_button"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@+id/buttonPanel"
+                android:layout_toEndOf="@+id/buttonPanel"
+                android:layout_weight="0.33"
+                android:textColor="#007AFF"
+                style="?android:attr/borderlessButtonStyle"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="gallary"
+                android:id="@+id/buttonPanel"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_weight="0.33"
+                android:textColor="#007AFF"
+                style="?android:attr/borderlessButtonStyle"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Save"
+                android:id="@+id/Savebutton"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_weight="0.33"
+                android:textColor="#007AFF"
+                style="?android:attr/borderlessButtonStyle"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
